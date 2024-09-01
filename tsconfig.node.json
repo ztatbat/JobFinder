@@ -1,0 +1,8 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": false // Ensure this is set to false to allow emitting
+  },
+  "include": ["src"]
+}
