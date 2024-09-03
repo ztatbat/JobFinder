@@ -15,7 +15,8 @@ function App() {
         flexDirection: "column",
         alignItems: "center",
         justifyContent: "flex-start",
-        overflow: 'scroll'
+        overflow: 'scroll',
+        overflowX: 'hidden'
       }}
     >
 

@@ -68,7 +68,7 @@ const useGetSearchResults = (filters: Filters): UseGetSearchResultsResult => {
     } finally {
       setLoading(false);
     }
-  }, [filters]);
+  }, [filters.searchString]);
 
   const debouncedFetchData = useMemo(() => debounce(fetchData, 300), [fetchData]);
 

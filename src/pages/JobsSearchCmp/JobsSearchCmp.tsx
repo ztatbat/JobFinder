@@ -54,9 +54,6 @@ const JobsSearchCmp: FC = () => {
     const handleChange = (value: string, filter: 'searchString' | 'sortBy' | 'sortType' | 'category') => {
         setFilters((prev) => {
             const newFilters = { ...prev, [filter]: value };
-            if (JSON.stringify(newFilters) !== JSON.stringify(defaultFilter)) {
-                localStorage.setItem('filters', JSON.stringify(newFilters));
-            }
             return newFilters;
         });
     };
@@ -64,9 +61,6 @@ const JobsSearchCmp: FC = () => {
     const handlePageChange = (event: React.ChangeEvent<unknown>, page: number) => {
         setFilters((prev) => {
             const newFilters = { ...prev, page };
-            if (JSON.stringify(newFilters) !== JSON.stringify(defaultFilter)) {
-                localStorage.setItem('filters', JSON.stringify(newFilters));
-            }
             return newFilters;
         });
     };
@@ -79,7 +73,6 @@ const JobsSearchCmp: FC = () => {
 
     useEffect(() => {
         error && toast.error(error);
-
     }, [error])
 
     return (

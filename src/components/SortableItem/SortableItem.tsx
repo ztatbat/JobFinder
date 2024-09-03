@@ -17,7 +17,6 @@ const SortableItem: React.FC<{ id: string; children: React.ReactNode }> = ({
 
     return (
         <StyledBox pt={2} pb={4} style={{ width: "100%", paddingTop: "0", ...style }} ref={setNodeRef} {...attributes} {...listeners}>
-
             {children}
         </StyledBox>
     );
